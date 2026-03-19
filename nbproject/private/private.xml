@@ -4,6 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/tablaproductos/TablaProductos.java</file>
+            <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/dao/ProductoDAO.java</file>
+            <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/config/Conexion.java</file>
         </group>
     </open-files>
 </project-private>
