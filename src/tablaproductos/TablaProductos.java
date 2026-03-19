@@ -18,22 +18,21 @@ public class TablaProductos {
     dao.ProductoDAO dao = new dao.ProductoDAO();
     modelo.Producto p = new modelo.Producto();
 
-    // --- AGREGANDO PRODUCTO PARA EL GIMNASIO ---
-    p.setNombre("Proteina");
-    p.setCategoria("Suplementos");
-    p.setPrecio(55.0);
-    p.setCantidad(20);
+    // --- PROCESO DE ACTUALIZACIÓN ---
+    // 1. Definimos el ID de un producto que ya esté en Laragon (ejemplo: ID 1)
+    p.setId(3); 
     
-    dao.agregar(p);
+    // 2. Definimos los nuevos datos
+    p.setNombre("Proteína Whey (Sabor Vainilla)");
+    p.setCategoria("Suplementos Premium");
+    p.setPrecio(62.50);
+    p.setCantidad(30);
 
-    // --- MOSTRANDO EL INVENTARIO DE GESBOX ---
-    System.out.println("======= INVENTARIO GESBOX =======");
-    System.out.printf("%-5s %-20s %-15s %-10s %n", "ID", "NOMBRE", "CATEGORÍA", "STOCK");
-    
-    for (modelo.Producto item : dao.listar()) {
-        System.out.printf("%-5d %-20s %-15s %-10d %n", 
-            item.getId(), item.getNombre(), item.getCategoria(), item.getCantidad());
+    // 3. Llamamos al método
+    if (dao.actualizar(p) == 1) {
+        System.out.println("¡SISTEMA GESBOX: Producto actualizado!");
+    } else {
+        System.out.println("Error: No se pudo actualizar el registro.");
     }
-      
 }    
-}
+}    

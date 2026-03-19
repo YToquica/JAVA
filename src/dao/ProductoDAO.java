@@ -47,6 +47,33 @@ public class ProductoDAO {
         } catch (Exception e) { System.out.println(e); }
         return lista;
     }
+    
+    // 3. UPDATE; Actualizar productos
+    
+    public int actualizar(modelo.Producto p) {
+    // Definimos la consulta SQL apuntando al ID específico
+    String sql = "UPDATE productos SET nombre=?, categoria=?, precio=?, cantidad=? WHERE id=?";
+    try {
+        con = conectar.getConnection();
+        ps = con.prepareStatement(sql);
+        
+        // Pasamos los nuevos valores
+        ps.setString(1, p.getNombre());
+        ps.setString(2, p.getCategoria());
+        ps.setDouble(3, p.getPrecio());
+        ps.setInt(4, p.getCantidad());
+        
+        // El quinto parámetro es el ID del producto que queremos cambiar
+        ps.setInt(5, p.getId());
+        
+        ps.executeUpdate();
+        return 1; // Éxito
+    } catch (Exception e) {
+        System.err.println("Error al actualizar en la DB: " + e);
+        return 0; // Fallo
+    }
+}
+    
 
     // 3. DELETE: Eliminar producto
     public void eliminar(int id) {
