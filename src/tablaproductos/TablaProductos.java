@@ -23,16 +23,33 @@ public class TablaProductos {
     p.setId(3); 
     
     // 2. Definimos los nuevos datos
+<<<<<<< HEAD
     p.setNombre("Proteína Whey (Sabor Vainilla)");
     p.setCategoria("Suplementos Premium");
     p.setPrecio(62.50);
     p.setCantidad(30);
+=======
+    p.setNombre("Proteína sabor chocolate");
+    p.setCategoria("Suplementos Premium");
+    p.setPrecio(62.50);
+    p.setCantidad(11);
+>>>>>>> 081025a9dce648ad562a2ab3be380fc609fd567b
 
     // 3. Llamamos al método
     if (dao.actualizar(p) == 1) {
         System.out.println("¡SISTEMA GESBOX: Producto actualizado!");
+<<<<<<< HEAD
     } else {
         System.out.println("Error: No se pudo actualizar el registro.");
     }
 }    
 }    
+=======
+
+    } else {
+        System.out.println("Error: No se pudo actualizar el registro.");
+    }
+}
+}    
+
+>>>>>>> 081025a9dce648ad562a2ab3be380fc609fd567b

@@ -5,6 +5,10 @@
         <group>
             <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/tablaproductos/TablaProductos.java</file>
             <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/dao/ProductoDAO.java</file>
+<<<<<<< HEAD
+=======
+            <file>file:/C:/Users/YEFER/Documents/NetBeansProjects/TablaProductos/src/config/Conexion.java</file>
+>>>>>>> 081025a9dce648ad562a2ab3be380fc609fd567b
         </group>
     </open-files>
 </project-private>

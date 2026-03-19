@@ -48,9 +48,14 @@ public class ProductoDAO {
         return lista;
     }
     
+<<<<<<< HEAD
     // 3. UPDATE; Actualizar productos
     
     public int actualizar(modelo.Producto p) {
+=======
+    //3. UPDATE
+        public int actualizar(modelo.Producto p) {
+>>>>>>> 081025a9dce648ad562a2ab3be380fc609fd567b
     // Definimos la consulta SQL apuntando al ID específico
     String sql = "UPDATE productos SET nombre=?, categoria=?, precio=?, cantidad=? WHERE id=?";
     try {
@@ -73,9 +78,12 @@ public class ProductoDAO {
         return 0; // Fallo
     }
 }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 081025a9dce648ad562a2ab3be380fc609fd567b
 
-    // 3. DELETE: Eliminar producto
+    // 4. DELETE: Eliminar producto
     public void eliminar(int id) {
         String sql = "DELETE FROM productos WHERE id=" + id;
         try {
